@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog | Nathios</title>
+<meta name="description" content="Notes on web, app and AI development from the Nathios team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="corner-nathios-mark" href="index.html" aria-label="Nathios home"><img src="assets/nathios-mark-clean.png" alt="Nathios"></a>
+<!-- ================= AEGIX-STYLE SIDE NAV ================= -->
+<div class="side-dock" aria-label="Quick navigation">
+  <button class="dock-grid" id="dockGrid" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </button>
+  <div class="dock-label">NAT</div>
+</div>
+<div class="side-overlay" id="sideOverlay"></div>
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <a href="index.html" class="drawer-brand"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo"><strong>NATHIOS</strong></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close navigation">+</button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">HOME <span>↗</span></a>
+    <a href="about.html">ABOUT <span>↗</span></a>
+    <div class="drawer-group open">
+      <button type="button" class="drawer-group-title" aria-expanded="true"><span>SOLUTIONS</span><b>−</b></button>
+      <div class="drawer-sub">
+        <a href="web-development.html">WEB DEVELOPMENT</a>
+        <a href="ai-agents.html">AUTOMATION</a>
+        <a href="ai-agents.html">AI AGENTS</a>
+        <a href="cloud.html">CLOUD INFRASTRUCTURE</a>
+        <a href="app-development.html">APP DEVELOPMENT</a>
+      </div>
+    </div>
+    <a class="drawer-highlight" href="makeover.html">WEBSITE MAKEOVER <span>↗</span></a>
+    <a class="drawer-highlight" href="seo-audit.html">FREE SEO AUDIT <span>↗</span></a>
+    <a href="services.html">CASE STUDIES <span>↗</span></a>
+    <a href="blog.html">NEWS <span>↗</span></a>
+    <a href="contact.html">CONTACT <span>↗</span></a>
+    <a href="services.html#stack">TECH STACK <span>↗</span></a>
+  </nav>
+  <div class="drawer-foot">
+    <div class="drawer-socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="mailto:hello@nathios.in" aria-label="Email">✉</a></div>
+    <div class="drawer-plus">+</div>
+    <a href="mailto:hello@nathios.in">HELLO@NATHIOS.IN</a>
+    <a href="tel:+91000999000">+91 000 999 000</a>
+  </div>
+</aside>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qTL" gradientUnits="userSpaceOnUse" x1="-60" y1="-104" x2="-20" y2="10"><stop offset="0" stop-color="#19d3ff"/><stop offset="1" stop-color="#1f6bff"/></linearGradient>
+    <linearGradient id="qTR" gradientUnits="userSpaceOnUse" x1="0" y1="-60" x2="104" y2="0"><stop offset="0" stop-color="#0d1a7a"/><stop offset=".5" stop-color="#2b3fe6"/><stop offset="1" stop-color="#8a55ff"/></linearGradient>
+    <linearGradient id="qBR" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="10" y2="104"><stop offset="0" stop-color="#8a55ff"/><stop offset="1" stop-color="#3b2aa8"/></linearGradient>
+    <linearGradient id="qBL" gradientUnits="userSpaceOnUse" x1="-104" y1="0" x2="-8" y2="104"><stop offset="0" stop-color="#0b1a86"/><stop offset=".55" stop-color="#2557f0"/><stop offset="1" stop-color="#7a7cff"/></linearGradient>
+    <clipPath id="starClip"><path d="M0 -104 Q24 -24 104 0 Q24 24 0 104 Q-24 24 -104 0 Q-24 -24 0 -104Z"/></clipPath>
+    <symbol id="mark" viewBox="-110 -110 220 220">
+      <g clip-path="url(#starClip)">
+        <rect x="-110" y="-110" width="110" height="110" fill="url(#qTL)"/>
+        <rect x="0" y="-110" width="110" height="110" fill="url(#qTR)"/>
+        <rect x="0" y="0" width="110" height="110" fill="url(#qBR)"/>
+        <rect x="-110" y="0" width="110" height="110" fill="url(#qBL)"/>
+      </g>
+      <path d="M0 -15 Q3 -3 15 0 Q3 3 0 15 Q-3 3 -15 0 Q-3 -3 0 -15Z" fill="#040613"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+
+
+<main>
+<section class="pagehero">
+  <div class="sec-video-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline poster="assets/hero/hero-3.jpg"><source src="assets/hero/hero.mp4" type="video/mp4"></video>
+    <div class="sec-video-shade"></div>
+  </div>
+  <div class="page-glow"></div>
+  <div class="wrap">
+    <div class="crumb rv"><a href="index.html">Home</a> / <span>Blog</span></div>
+    <span class="chip rv">Notes from the studio</span>
+    <h1 class="rv" style="--d:60ms">Ideas on building web, app and AI products.</h1>
+    <p class="lead rv" style="--d:120ms">Practical write-ups from the projects we ship — replace these with your own posts whenever you're ready.</p>
+  </div>
+</section>
+<div class="punch-marq" data-items="Notes from real projects • No fluff, just practice • Updated as we ship • Web, AI and automation">
+  <div class="punch-marq-in"></div>
+</div>
+
+<section class="sec tight">
+  <div class="wrap">
+    <a href="#" class="post-feat rv">
+      <div class="post-media"><div class="glow"></div><span class="tag">Strategy</span></div>
+      <div class="post-body">
+        <h3>Why fixed-scope pricing gets your product shipped faster</h3>
+        <p style="color:var(--muted);margin-top:12px">Open-ended retainers sound flexible, but they quietly stretch timelines. Here's how a fixed scope and a fixed price keeps everyone moving toward the same launch date.</p>
+        <div class="post-meta"><span>Nathios Team</span><span>Sep 12, 2026</span><span>6 min read</span></div>
+      </div>
+    </a>
+
+    <div class="blog-grid">
+      <a href="#" class="post rv">
+        <div class="post-media"><div class="glow"></div><span class="tag">Web</span></div>
+        <div class="post-body">
+          <h3>Five signs your website is costing you customers</h3>
+          <p>Slow load times aren't the only silent conversion killer. A quick audit checklist we use with every new client.</p>
+          <div class="post-meta"><span>Sep 5, 2026</span><span>4 min</span></div>
+        </div>
+      </a>
+      <a href="#" class="post rv" style="--d:60ms">
+        <div class="post-media"><div class="glow"></div><span class="tag">Mobile</span></div>
+        <div class="post-body">
+          <h3>Flutter vs. native: choosing for your app MVP</h3>
+          <p>Cross-platform gets your idea in front of users faster — but when does it actually make sense to go native?</p>
+          <div class="post-meta"><span>Aug 28, 2026</span><span>7 min</span></div>
+        </div>
+      </a>
+      <a href="#" class="post rv" style="--d:120ms">
+        <div class="post-media"><div class="glow"></div><span class="tag">AI</span></div>
+        <div class="post-body">
+          <h3>What an AI chatbot should never say to a customer</h3>
+          <p>Guardrails, handover rules and the questions worth training your assistant to escalate rather than guess.</p>
+          <div class="post-meta"><span>Aug 19, 2026</span><span>5 min</span></div>
+        </div>
+      </a>
+      <a href="#" class="post rv">
+        <div class="post-media"><div class="glow"></div><span class="tag">Design</span></div>
+        <div class="post-body">
+          <h3>The UI audit we run before any redesign</h3>
+          <p>A ten-point pass that catches most of what makes an interface feel dated, before a single pixel changes.</p>
+          <div class="post-meta"><span>Aug 6, 2026</span><span>5 min</span></div>
+        </div>
+      </a>
+      <a href="#" class="post rv" style="--d:60ms">
+        <div class="post-media"><div class="glow"></div><span class="tag">E-commerce</span></div>
+        <div class="post-body">
+          <h3>Cutting cart abandonment without discounting everything</h3>
+          <p>Checkout friction fixes that moved the needle more than another coupon code ever did.</p>
+          <div class="post-meta"><span>Jul 24, 2026</span><span>6 min</span></div>
+        </div>
+      </a>
+      <a href="#" class="post rv" style="--d:120ms">
+        <div class="post-media"><div class="glow"></div><span class="tag">Process</span></div>
+        <div class="post-body">
+          <h3>Inside our five-step build process</h3>
+          <p>What actually happens between "let's do this" and launch day, week by week.</p>
+          <div class="post-meta"><span>Jul 10, 2026</span><span>4 min</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="cta-band rv">
+      <h2>Have a project in mind?</h2>
+      <p>Skip the research phase — tell us what you're building and we'll scope it for you.</p>
+      <div class="cta-row">
+        <a href="contact.html" class="btn primary">Start a project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="logo"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo">Nathios</a>
+    <nav aria-label="Footer">
+      <a href="about.html">About</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </nav>
+    <span>© 2026 Nathios. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+
+<section class="nathios-reference-end" aria-label="Start a project">
+  <div class="nre-left">
+    <div class="nre-mini">NATHIOS / 004</div>
+    <h2>Ready for a<br>new website?</h2>
+    <p>Partner with us, share your requirements, and let our team build a digital experience made for your business.</p>
+    <a href="contact.html" class="nre-button">GET STARTED <span>↗</span></a>
+  </div>
+  <div class="nre-right">
+    <div class="nre-slashes">/// /// /// /// /// /// /// /// ///</div>
+    <div class="nre-columns">
+      <div>
+        <b>PAGES</b>
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="web-development.html">Web Development</a>
+        <a href="automation.html">Automation</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="cloud.html">Cloud</a>
+        <a href="app-development.html">Apps</a>
+        <a href="tech-stack.html">Tech Stack</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="detailed-rates.html">Detailed Rates</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <b>SOCIAL</b>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="linkedin">LinkedIn</a>
+        <a href="mailto:hello@nathios.in">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

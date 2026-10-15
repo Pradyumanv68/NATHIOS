@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nathios | Website Makeover</title>
+<meta name="description" content="Transform an outdated website into a modern, animated NATHIOS digital experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/makeover.css"><link rel="stylesheet" href="assets/seo-audit.css">
+
+
+
+<style id="nathios-makeover-video-style">
+.mk-hero{overflow:hidden;background:#02050b}
+.mk-makeover-video{position:absolute;inset:0;width:100%;height:100%;z-index:-3;overflow:hidden;pointer-events:none;background:#02050b}
+.mk-makeover-video video{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.92) contrast(1.05) brightness(.58);transform:scale(1.025);animation:makeoverVideoDrift 18s ease-in-out infinite alternate}
+.mk-makeover-video-shade{position:absolute;inset:0;background:radial-gradient(circle at 72% 46%,rgba(31,116,255,.20),transparent 34%),linear-gradient(90deg,rgba(2,5,11,.80) 0%,rgba(2,5,11,.35) 48%,rgba(2,5,11,.56) 100%),linear-gradient(180deg,rgba(2,5,11,.25) 0%,rgba(2,5,11,.48) 100%)}
+.mk-makeover-video-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(115,150,210,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(115,150,210,.055) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,black 0%,transparent 100%);opacity:.55;animation:gridDrift 20s linear infinite}
+@keyframes makeoverVideoDrift{from{transform:scale(1.025) translate3d(0,0,0)}to{transform:scale(1.07) translate3d(-.8%,-.5%,0)}}
+@media (prefers-reduced-motion:reduce){.mk-makeover-video video{animation:none;transform:scale(1.025)}.mk-makeover-video-grid{animation:none}}
+</style>
+</head>
+<body class="makeover-page">
+
+<canvas id="makeoverParticles" aria-hidden="true"></canvas>
+<a class="corner-nathios-mark" href="index.html" aria-label="Nathios home"><img src="assets/nathios-mark-clean.png" alt="Nathios"></a>
+<div class="side-dock" aria-label="Quick navigation"><button class="dock-grid" id="dockGrid" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></button><div class="dock-label">NAT</div></div>
+<div class="side-overlay" id="sideOverlay"></div>
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true">
+  <div class="drawer-head"><a href="index.html" class="drawer-brand"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo"><strong>NATHIOS</strong></a><button class="drawer-close" id="drawerClose" aria-label="Close navigation">+</button></div>
+  <nav class="drawer-nav">
+    <a href="index.html">HOME <span>↗</span></a><a href="about.html">ABOUT <span>↗</span></a>
+    <div class="drawer-group open"><button type="button" class="drawer-group-title" aria-expanded="true"><span>SOLUTIONS</span><b>−</b></button><div class="drawer-sub"><a href="services.html#web">WEB DEVELOPMENT</a><a href="services.html#ai">AUTOMATION</a><a href="services.html#ai">AI AGENTS</a><a href="services.html#cloud">CLOUD INFRASTRUCTURE</a><a href="services.html#app">APP DEVELOPMENT</a></div></div>
+    <a class="drawer-highlight" href="makeover.html">WEBSITE MAKEOVER <span>↗</span></a>
+    <a class="drawer-highlight" href="seo-audit.html">FREE SEO AUDIT <span>↗</span></a>
+    <a href="case-studies.html">CASE STUDIES <span>↗</span></a><a href="blog.html">NEWS <span>↗</span></a><a href="contact.html">CONTACT <span>↗</span></a><a href="services.html#stack">TECH STACK <span>↗</span></a>
+  </nav>
+  <div class="drawer-foot"><div class="drawer-socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="mailto:hello@nathios.in" aria-label="Email">✉</a></div><div class="drawer-plus">+</div><a href="mailto:hello@nathios.in">HELLO@NATHIOS.IN</a><a href="tel:+91000999000">+91 000 999 000</a></div>
+</aside>
+
+<header class="makeover-nav"><a href="index.html" class="mk-nav-brand"><img src="assets/nathios-mark-clean.png" alt="NATHIOS"><span>NATHIOS</span></a><nav><a href="index.html">Home</a><a href="services.html">Services</a><a class="active" href="makeover.html">Makeover</a><a href="case-studies.html">Work</a></nav><a href="contact.html" class="mk-nav-cta">Start a project <span>↗</span></a></header>
+
+<main>
+<section class="mk-hero">
+  <div class="mk-makeover-video" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="assets/nathios-makeover.mp4" type="video/mp4">
+    </video>
+    <div class="mk-makeover-video-shade"></div>
+    <div class="mk-makeover-video-grid"></div>
+  </div>
+
+  <div class="mk-hero-grid"></div><div class="mk-hero-glow"></div>
+  <div class="mk-hero-copy rv"><span class="mk-eyebrow"><i></i> NATHIOS WEBSITE MAKEOVER</span><h1>Your old website.<br><em>Reimagined.</em></h1><p>We turn dated websites into cinematic, responsive and conversion-focused digital experiences.</p><div class="mk-actions"><a class="mk-primary" href="#compare">See the transformation <span>↓</span></a><a class="mk-ghost" href="contact.html">Start a makeover <span>↗</span></a></div></div>
+  <div class="mk-hero-object" data-tilt aria-hidden="true"><div class="mk-orbit o1"></div><div class="mk-orbit o2"></div></div>
+  <div class="mk-scroll">SCROLL TO TRANSFORM <span>↓</span></div>
+</section>
+
+<section class="mk-intro"><div class="mk-section-kicker">01 / THE IDEA</div><div class="mk-intro-copy"><h2>Don't replace everything.<br><span>Transform what already works.</span></h2><p>Your existing website already contains your brand, content and business story. We redesign the experience around it — structure, interface, performance, motion and the journey from visitor to customer.</p></div></section>
+
+<section class="mk-compare" id="compare">
+  <div class="mk-section-head rv"><div><span class="mk-section-kicker">02 / BEFORE → AFTER</span><h2>Drag the future<br><span>over the past.</span></h2></div><p>Move the slider. The old experience stays underneath while the new NATHIOS experience is revealed.</p></div>
+  <div class="compare-stage" id="compareStage">
+    <div class="compare-side old"><div class="browser-mock old-browser"><div class="browser-top"><i></i><i></i><i></i><span>yourwebsite.com</span></div><div class="old-layout"><div class="old-logo">YOUR BRAND</div><div class="old-nav">HOME &nbsp; ABOUT &nbsp; SERVICES &nbsp; CONTACT</div><div class="old-hero"><small>WELCOME TO OUR WEBSITE</small><b>WE PROVIDE<br>SERVICES</b><button>LEARN MORE</button></div><div class="old-cards"><i></i><i></i><i></i></div></div></div><span class="compare-label">BEFORE</span></div>
+    <div class="compare-side new"><div class="browser-mock new-browser"><div class="browser-top"><i></i><i></i><i></i><span>nathios.build / new-experience</span></div><div class="new-layout"><div class="new-nav"><img src="assets/nathios-mark-clean.png"><span>NATHIOS</span><div>WORK&nbsp;&nbsp;&nbsp; SERVICES&nbsp;&nbsp;&nbsp; AI&nbsp;&nbsp;&nbsp; ABOUT</div></div><div class="new-hero"><small>WEBSITE MAKEOVER</small><b>BUILD WHAT<br><em>COMES NEXT.</em></b><p>Strategy · Design · Development · AI</p><div class="new-pulse"></div></div><div class="new-bottom"><span>01</span><span>WEB</span><span>AI</span><span>AUTOMATION</span></div></div></div><span class="compare-label">AFTER</span></div>
+    <div class="compare-divider" id="compareDivider"><button aria-label="Drag comparison slider">↔</button></div>
+  </div>
+  <div class="compare-hint">DRAG / MOVE TO REVEAL</div>
+</section>
+
+<section class="mk-transform"><div class="mk-section-head rv"><div><span class="mk-section-kicker">03 / THE MAKEOVER</span><h2>Watch a website<br><span>change its identity.</span></h2></div></div>
+  <div class="transform-scene" id="transformScene"><div class="transform-grid"></div><div class="transform-old"><span>OLD WEBSITE</span><div class="fake-lines"></div><div class="fake-blocks"><i></i><i></i><i></i></div></div><div class="transform-beam"></div><div class="transform-new"><img src="assets/nathios-mark-clean.png"><span>NATHIOS EXPERIENCE</span><div class="new-lines"><i></i><i></i><i></i></div></div><div class="transform-stage-label"><b id="transformNumber">01</b><span id="transformWord">AUDIT</span></div></div>
+</section>
+
+<section class="mk-pillars"><div class="mk-section-head rv"><div><span class="mk-section-kicker">04 / WHAT CHANGES</span><h2>Not just a new look.<br><span>A better experience.</span></h2></div></div><div class="pillar-grid">
+  <article class="pillar" data-tilt><span>01</span><div class="pillar-icon">◈</div><h3>DESIGN</h3><p>Modern visual language, hierarchy, spacing and brand expression.</p><div class="pillar-line"></div></article>
+  <article class="pillar" data-tilt><span>02</span><div class="pillar-icon">⌁</div><h3>UX</h3><p>Clear navigation and journeys designed around what visitors need.</p><div class="pillar-line"></div></article>
+  <article class="pillar" data-tilt><span>03</span><div class="pillar-icon">◉</div><h3>PERFORMANCE</h3><p>Responsive layouts, optimized assets and faster interactions.</p><div class="pillar-line"></div></article>
+  <article class="pillar" data-tilt><span>04</span><div class="pillar-icon">✦</div><h3>MOTION</h3><p>Purposeful animation that guides attention instead of distracting it.</p><div class="pillar-line"></div></article>
+  <article class="pillar" data-tilt><span>05</span><div class="pillar-icon">AI</div><h3>INTELLIGENCE</h3><p>AI, chat, personalization and automation where they create value.</p><div class="pillar-line"></div></article>
+  <article class="pillar" data-tilt><span>06</span><div class="pillar-icon">↗</div><h3>CONVERSION</h3><p>Clear actions and content architecture built around enquiries and growth.</p><div class="pillar-line"></div></article>
+</div></section>
+
+<section class="mk-flow"><div class="mk-section-head rv"><div><span class="mk-section-kicker">05 / PROCESS</span><h2>From outdated<br><span>to outstanding.</span></h2></div></div><div class="flow-track"><div class="flow-line"><i></i></div><div class="flow-item"><b>01</b><span>DISCOVER</span><p>Audit the current experience.</p></div><div class="flow-item"><b>02</b><span>RETHINK</span><p>Map content, users and journeys.</p></div><div class="flow-item"><b>03</b><span>REDESIGN</span><p>Create the new visual system.</p></div><div class="flow-item"><b>04</b><span>REBUILD</span><p>Develop the responsive experience.</p></div><div class="flow-item"><b>05</b><span>ANIMATE</span><p>Add meaningful interaction.</p></div><div class="flow-item"><b>06</b><span>LAUNCH</span><p>Test, optimize and go live.</p></div></div></section>
+
+<section class="mk-metrics"><div class="metric"><strong data-count="6">0</strong><span>CORE AREAS</span></div><div class="metric"><strong data-count="360">0</strong><span>DEGREE THINKING</span></div><div class="metric"><strong data-count="1">0</strong><span>CONNECTED EXPERIENCE</span></div></section>
+
+<section class="sa-teaser" id="seo-audit-teaser"><div class="sa-teaser-in sa">
+  <div><span class="sa-kicker">BEFORE YOU REDESIGN</span><h2>Is your site even findable on Google?</h2><p>Run our free SEO audit first. We crawl up to 100 pages, test mobile speed and score seven areas, so the makeover fixes what actually matters.</p></div>
+  <div><form class="sa-form" id="saTeaserForm" novalidate><label class="sr-only" for="saTeaserUrl">Website address</label><input id="saTeaserUrl" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourwebsite.com" required><button type="submit"><span>Audit my site</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></button></form>
+  <ul class="sa-trust"><li>Free</li><li>Up to 100 pages</li><li>About 5 minutes</li></ul></div>
+</div></section>
+<script>document.getElementById('saTeaserForm').addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('saTeaserUrl').value.trim();location.href='seo-audit.html'+(v?'?url='+encodeURIComponent(v)+'&run=1':'')});</script>
+
+<section class="mk-final"><div class="mk-final-particles"></div><div class="mk-final-n"><img src="assets/nathios-mark-clean.png"></div><span class="mk-eyebrow"><i></i> READY FOR THE NEXT VERSION?</span><h2>Make your website<br><em>work harder.</em></h2><p>Bring us the website you have. We'll help shape what it can become.</p><a class="mk-primary" href="contact.html">Start your makeover <span>↗</span></a></section>
+</main>
+<script src="assets/app.js"></script><script src="assets/makeover.js"></script>
+</body></html>

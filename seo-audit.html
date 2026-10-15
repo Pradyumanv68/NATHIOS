@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free SEO Audit | Nathios</title>
+<meta name="description" content="Free SEO audit: we crawl up to 100 pages, test mobile speed and score your site across seven areas, including AI search readiness, with a plain-English fix list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/services-redesign.css">
+<link rel="stylesheet" href="assets/seo-audit.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the SEO audit really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no sign-up, no card and no email wall. Run it as often as you like within the hourly limit."}},{"@type":"Question","name":"How long does it take?","acceptedAnswer":{"@type":"Answer","text":"Most audits finish in two to five minutes. Larger sites take longer because we check up to 100 pages and run a full mobile speed test."}},{"@type":"Question","name":"What does the audit check?","acceptedAnswer":{"@type":"Answer","text":"Seven areas: technical health, on-page SEO, content, schema, mobile speed, AI search readiness and images. Each area gets its own score, and every issue lists the affected pages."}},{"@type":"Question","name":"Why only 100 pages?","acceptedAnswer":{"@type":"Answer","text":"A hundred pages is enough to show the patterns that matter, such as repeated missing titles or thin content, while keeping the audit fast and free. If your site is bigger, we\u2019ll tell you how many pages we found, and we can run a full-site audit on request."}},{"@type":"Question","name":"Do you store my website data?","acceptedAnswer":{"@type":"Answer","text":"No database and no accounts. Your report is held in memory for about an hour so you can read and print it, then it is discarded."}},{"@type":"Question","name":"Will the audit affect my website?","acceptedAnswer":{"@type":"Answer","text":"No. We only read pages, like a visitor would, with a handful of requests at a time and a clear user-agent (NathiosSEOAudit). We never submit forms or change anything."}},{"@type":"Question","name":"Where does the mobile speed score come from?","acceptedAnswer":{"@type":"Answer","text":"From Google\u2019s PageSpeed Insights, which runs Lighthouse on a simulated mid-range phone. If Google\u2019s service is busy, we say so and estimate speed from page weight instead."}}]}</script>
+<script>
+  /* Where the audit API lives. Empty = same server that serves this page (node server/server.js).
+     If the site is hosted somewhere static, set it to your API address, e.g. 'https://audit.yourdomain.com' */
+  window.NATHIOS_AUDIT_API = '';
+</script>
+</head>
+<body>
+<a class="corner-nathios-mark" href="index.html" aria-label="Nathios home"><img src="assets/nathios-mark-clean.png" alt="Nathios"></a>
+<!-- ================= AEGIX-STYLE SIDE NAV ================= -->
+<div class="side-dock" aria-label="Quick navigation">
+  <button class="dock-grid" id="dockGrid" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </button>
+  <div class="dock-label">NAT</div>
+</div>
+<div class="side-overlay" id="sideOverlay"></div>
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <a href="index.html" class="drawer-brand"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo"><strong>NATHIOS</strong></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close navigation">+</button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">HOME <span>↗</span></a>
+    <a href="about.html">ABOUT <span>↗</span></a>
+    <div class="drawer-group open">
+      <button type="button" class="drawer-group-title" aria-expanded="true"><span>SOLUTIONS</span><b>−</b></button>
+      <div class="drawer-sub">
+        <a href="web-development.html">WEB DEVELOPMENT</a>
+        <a href="ai-agents.html">AUTOMATION</a>
+        <a href="ai-agents.html">AI AGENTS</a>
+        <a href="cloud.html">CLOUD INFRASTRUCTURE</a>
+        <a href="app-development.html">APP DEVELOPMENT</a>
+      </div>
+    </div>
+    <a class="drawer-highlight" href="makeover.html">WEBSITE MAKEOVER <span>↗</span></a>
+    <a class="drawer-highlight" href="seo-audit.html">FREE SEO AUDIT <span>↗</span></a>
+    <a href="services.html">CASE STUDIES <span>↗</span></a>
+    <a href="blog.html">NEWS <span>↗</span></a>
+    <a href="contact.html">CONTACT <span>↗</span></a>
+    <a href="services.html#stack">TECH STACK <span>↗</span></a>
+  </nav>
+  <div class="drawer-foot">
+    <div class="drawer-socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="mailto:hello@nathios.in" aria-label="Email">✉</a></div>
+    <div class="drawer-plus">+</div>
+    <a href="mailto:hello@nathios.in">HELLO@NATHIOS.IN</a>
+    <a href="tel:+91000999000">+91 000 999 000</a>
+  </div>
+</aside>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qTL" gradientUnits="userSpaceOnUse" x1="-60" y1="-104" x2="-20" y2="10"><stop offset="0" stop-color="#19d3ff"/><stop offset="1" stop-color="#1f6bff"/></linearGradient>
+    <linearGradient id="qTR" gradientUnits="userSpaceOnUse" x1="0" y1="-60" x2="104" y2="0"><stop offset="0" stop-color="#0d1a7a"/><stop offset=".5" stop-color="#2b3fe6"/><stop offset="1" stop-color="#8a55ff"/></linearGradient>
+    <linearGradient id="qBR" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="10" y2="104"><stop offset="0" stop-color="#8a55ff"/><stop offset="1" stop-color="#3b2aa8"/></linearGradient>
+    <linearGradient id="qBL" gradientUnits="userSpaceOnUse" x1="-104" y1="0" x2="-8" y2="104"><stop offset="0" stop-color="#0b1a86"/><stop offset=".55" stop-color="#2557f0"/><stop offset="1" stop-color="#7a7cff"/></linearGradient>
+    <clipPath id="starClip"><path d="M0 -104 Q24 -24 104 0 Q24 24 0 104 Q-24 24 -104 0 Q-24 -24 0 -104Z"/></clipPath>
+    <symbol id="mark" viewBox="-110 -110 220 220">
+      <g clip-path="url(#starClip)">
+        <rect x="-110" y="-110" width="110" height="110" fill="url(#qTL)"/>
+        <rect x="0" y="-110" width="110" height="110" fill="url(#qTR)"/>
+        <rect x="0" y="0" width="110" height="110" fill="url(#qBR)"/>
+        <rect x="-110" y="0" width="110" height="110" fill="url(#qBL)"/>
+      </g>
+      <path d="M0 -15 Q3 -3 15 0 Q3 3 0 15 Q-3 3 -15 0 Q-3 -3 0 -15Z" fill="#040613"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+
+
+
+
+
+<main class="sa">
+<section class="sa-hero" id="top">
+  <div class="sa-grid" aria-hidden="true"></div><div class="sa-beam" aria-hidden="true"></div>
+  <div class="wrap sa-hero-in">
+    <nav class="sa-crumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i>/</i><span>SEO audit</span></nav>
+    <span class="sa-kicker">FREE SEO AUDIT</span>
+    <h1>Find what’s holding your website back on Google.</h1>
+    <p class="sa-sub">We crawl up to 100 pages, test your mobile speed and score your site across seven areas. Then you get a plain-English fix list.</p>
+    <form class="sa-form" id="saForm" novalidate>
+      <label class="sr-only" for="saUrl">Website address</label>
+      <input id="saUrl" name="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourwebsite.com" required>
+      <button type="submit" id="saGo"><span>Audit my site</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></button>
+    </form>
+    <p class="sa-error" id="saError" role="alert" hidden></p>
+    <ul class="sa-trust"><li>Free</li><li>Up to 100 pages</li><li>About 5 minutes</li></ul>
+  </div>
+</section>
+
+<section class="sa-run" id="saRun" hidden aria-live="polite"><div class="wrap">
+  <div class="sa-run-card">
+    <div class="sa-run-head"><div><span class="sa-kicker">AUDIT IN PROGRESS</span><h2 id="saRunHost">yourwebsite.com</h2></div><button type="button" class="sa-ghost" id="saCancel">Cancel</button></div>
+    <div class="sa-run-main"><div class="sa-pct"><b id="saPct">0</b><span>%</span></div><div class="sa-run-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="saProg"><i id="saBar"></i></div></div>
+    <p class="sa-run-msg" id="saMsg">Starting…</p>
+    <ol class="sa-steps" id="saSteps">
+      <li data-s="discover"><i></i><span>Finding pages</span></li>
+      <li data-s="crawl"><i></i><span>Crawling your site</span></li>
+      <li data-s="images"><i></i><span>Checking images and links</span></li>
+      <li data-s="speed"><i></i><span>Mobile speed test</span></li>
+      <li data-s="analyze"><i></i><span>Scoring</span></li>
+    </ol>
+    <div class="sa-run-stats"><div><b id="saFound">0</b><span>pages found</span></div><div><b id="saDone">0</b><span>pages crawled</span></div><div><b id="saTime">0:00</b><span>elapsed</span></div></div>
+    <ul class="sa-ticker" id="saTicker" aria-hidden="true"></ul>
+  </div>
+</div></section>
+
+<section class="sa-report" id="saReport" hidden><div class="wrap" id="saReportBody"></div></section>
+
+<section class="sa-sec" id="what-we-check"><div class="wrap">
+  <div class="sa-head sa-rv"><span class="sa-kicker">WHAT WE CHECK</span><h2>Seven areas, up to 100 pages, one score.</h2></div>
+  <div class="sa-cards"><article class="sa-card sa-rv" style="--i:0"><span class="sa-card-n">01</span><h3>Technical health</h3><p>HTTPS, broken pages, redirect chains, canonical tags, mobile setup, robots.txt and pages Google can’t reach.</p></article><article class="sa-card sa-rv" style="--i:1"><span class="sa-card-n">02</span><h3>On-page SEO</h3><p>Titles, meta descriptions, headings, duplicate tags, URL format and how deep pages are buried.</p></article><article class="sa-card sa-rv" style="--i:2"><span class="sa-card-n">03</span><h3>Content</h3><p>Thin and duplicate pages, readability, and whether each title matches what the page actually says.</p></article><article class="sa-card sa-rv" style="--i:3"><span class="sa-card-n">04</span><h3>Schema</h3><p>The structured data that tells Google and AI tools who you are, what you sell and how pages relate.</p></article><article class="sa-card sa-rv" style="--i:0"><span class="sa-card-n">05</span><h3>Mobile speed</h3><p>A real Google Lighthouse test of your home page on a phone: loading, interaction and layout shifts.</p></article><article class="sa-card sa-rv" style="--i:1"><span class="sa-card-n">06</span><h3>AI search readiness</h3><p>Whether ChatGPT, Perplexity and Google’s AI can read your site, plus llms.txt, FAQ markup and brand signals.</p></article><article class="sa-card sa-rv" style="--i:2"><span class="sa-card-n">07</span><h3>Images</h3><p>Missing alt text, oversized files, old formats, broken images and missing dimensions.</p></article></div>
+</div></section>
+
+<section class="sa-sec sa-alt" id="how-it-works"><div class="wrap">
+  <div class="sa-head sa-rv"><span class="sa-kicker">HOW IT WORKS</span><h2>From address to action plan in minutes.</h2></div>
+  <div class="sa-steps3"><div class="sa-step sa-rv" style="--i:0"><span class="sa-step-n">01</span><h3>Enter your website</h3><p>Just the address. No sign-up, no login, nothing to install.</p></div><div class="sa-step sa-rv" style="--i:1"><span class="sa-step-n">02</span><h3>We crawl and score it</h3><p>Up to 100 pages and a mobile speed test, scored across seven areas. Usually 2 to 5 minutes.</p></div><div class="sa-step sa-rv" style="--i:2"><span class="sa-step-n">03</span><h3>Get your fix list</h3><p>See your score and every issue right away, with why it matters, how to fix it and the pages affected.</p></div></div>
+</div></section>
+
+<section class="sa-sec" id="what-you-get"><div class="wrap sa-get">
+  <div class="sa-get-copy sa-rv"><span class="sa-kicker">WHAT YOU GET</span><h2>A score you can act on, not a wall of jargon.</h2><p>Every issue says what is wrong, why it matters for your business, and what to do about it, with the exact pages affected. Print it as a PDF and hand it straight to your developer.</p></div>
+  <div class="sa-sample sa-rv" style="--i:2" aria-label="Example report">
+    <div class="sa-sample-top"><span>YOURWEBSITE.COM</span><em>Example</em></div>
+    <div class="sa-sample-score"><b data-count="72">72</b><span class="sa-pill g-good">GOOD</span></div>
+    <div class="sa-sbars"><div class="sa-sbar"><span>Content quality</span><div><i style="--w:68%"></i></div><b>68</b></div><div class="sa-sbar"><span>Technical health</span><div><i style="--w:81%"></i></div><b>81</b></div><div class="sa-sbar"><span>On-page SEO</span><div><i style="--w:74%"></i></div><b>74</b></div><div class="sa-sbar"><span>Schema</span><div><i style="--w:40%"></i></div><b>40</b></div><div class="sa-sbar"><span>Mobile speed</span><div><i style="--w:55%"></i></div><b>55</b></div><div class="sa-sbar"><span>AI search readiness</span><div><i style="--w:67%"></i></div><b>67</b></div><div class="sa-sbar"><span>Images</span><div><i style="--w:85%"></i></div><b>85</b></div></div>
+    <div class="sa-sample-issues">
+      <div><span class="sa-sev sev-high">High</span><b>The main content loads slowly on mobile</b><p>Largest Contentful Paint is over 2.5 s, which hurts rankings and makes visitors leave.</p></div>
+      <div><span class="sa-sev sev-high">High</span><b>Structured data (schema) is missing</b><p>Schema helps Google and AI tools understand your business.</p></div>
+      <div><span class="sa-sev sev-medium">Medium</span><b>Meta descriptions are missing or the wrong length</b><p>The description is your sales line in Google results.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sa-sec sa-tight"><div class="wrap">
+  <div class="sa-cta sa-rv">
+    <span class="sa-kicker">WANT US TO FIX IT?</span>
+    <h2>Turn your audit into rankings.</h2>
+    <p>Our SEO team fixes what the audit finds, from technical clean-up to content that ranks and gets cited by AI search.</p>
+    <div class="sa-cta-row"><a class="sa-btn" href="contact.html">Talk to our SEO team <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a><a class="sa-btn sa-btn-ghost" href="services.html#pillar-seo-services">See SEO services</a></div>
+  </div>
+</div></section>
+
+<section class="sa-sec sa-faq" id="faq"><div class="wrap sa-faq-wrap">
+  <div class="sa-head sa-center sa-rv"><span class="sa-kicker">FAQ</span><h2>Questions before you start</h2></div>
+  <div class="sa-faq-list"><div class="sa-faq-item sa-rv" style="--i:0"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">01</span><span>Is the SEO audit really free?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>Yes. There is no sign-up, no card and no email wall. Run it as often as you like within the hourly limit.</p></div></div></div><div class="sa-faq-item sa-rv" style="--i:1"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">02</span><span>How long does it take?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>Most audits finish in two to five minutes. Larger sites take longer because we check up to 100 pages and run a full mobile speed test.</p></div></div></div><div class="sa-faq-item sa-rv" style="--i:2"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">03</span><span>What does the audit check?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>Seven areas: technical health, on-page SEO, content, schema, mobile speed, AI search readiness and images. Each area gets its own score, and every issue lists the affected pages.</p></div></div></div><div class="sa-faq-item sa-rv" style="--i:0"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">04</span><span>Why only 100 pages?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>A hundred pages is enough to show the patterns that matter, such as repeated missing titles or thin content, while keeping the audit fast and free. If your site is bigger, we’ll tell you how many pages we found, and we can run a full-site audit on request.</p></div></div></div><div class="sa-faq-item sa-rv" style="--i:1"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">05</span><span>Do you store my website data?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>No database and no accounts. Your report is held in memory for about an hour so you can read and print it, then it is discarded.</p></div></div></div><div class="sa-faq-item sa-rv" style="--i:2"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">06</span><span>Will the audit affect my website?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>No. We only read pages, like a visitor would, with a handful of requests at a time and a clear user-agent (NathiosSEOAudit). We never submit forms or change anything.</p></div></div></div><div class="sa-faq-item sa-rv" style="--i:0"><button type="button" class="sa-faq-q" aria-expanded="false"><span class="sa-faq-n">07</span><span>Where does the mobile speed score come from?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><div class="sa-faq-a"><div><p>From Google’s PageSpeed Insights, which runs Lighthouse on a simulated mid-range phone. If Google’s service is busy, we say so and estimate speed from page weight instead.</p></div></div></div></div>
+</div></section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="logo"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo">Nathios</a>
+    <nav aria-label="Footer">
+      <a href="about.html">About</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </nav>
+    <span>© 2026 Nathios. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script src="assets/seo-audit.js"></script>
+
+<section class="nathios-reference-end" aria-label="Start a project">
+  <div class="nre-left">
+    <div class="nre-mini">NATHIOS / 004</div>
+    <h2>Ready for a<br>new website?</h2>
+    <p>Partner with us, share your requirements, and let our team build a digital experience made for your business.</p>
+    <a href="contact.html" class="nre-button">GET STARTED <span>↗</span></a>
+  </div>
+  <div class="nre-right">
+    <div class="nre-slashes">/// /// /// /// /// /// /// /// ///</div>
+    <div class="nre-columns">
+      <div>
+        <b>PAGES</b>
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="web-development.html">Web Development</a>
+        <a href="automation.html">Automation</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="cloud.html">Cloud</a>
+        <a href="app-development.html">Apps</a>
+        <a href="tech-stack.html">Tech Stack</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="detailed-rates.html">Detailed Rates</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <b>SOCIAL</b>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="linkedin">LinkedIn</a>
+        <a href="mailto:hello@nathios.in">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nathios | Web, App and AI Development</title>
+<meta name="description" content="Nathios designs and builds websites, mobile apps and AI chatbots. Meet Zor, our AI assistant, and see transparent pricing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="home-page">
+<a class="corner-nathios-mark" href="index.html" aria-label="Nathios home"><img src="assets/nathios-mark-clean.png" alt="Nathios"></a>
+
+<!-- ================= AEGIX-STYLE SIDE NAV ================= -->
+<div class="side-dock" aria-label="Quick navigation">
+  <button class="dock-grid" id="dockGrid" aria-label="Open navigation" aria-expanded="false">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </button>
+  <div class="dock-label">NAT</div>
+</div>
+<div class="side-overlay" id="sideOverlay"></div>
+<aside class="side-drawer" id="sideDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <a href="index.html" class="drawer-brand"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo"><strong>NATHIOS</strong></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close navigation">+</button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="index.html">HOME <span>↗</span></a>
+    <a href="about.html">ABOUT <span>↗</span></a>
+    <div class="drawer-group open">
+      <button type="button" class="drawer-group-title" aria-expanded="true"><span>SOLUTIONS</span><b>−</b></button>
+      <div class="drawer-sub">
+        <a href="services.html#web">WEB DEVELOPMENT</a>
+        <a href="services.html#ai">AUTOMATION</a>
+        <a href="services.html#ai">AI AGENTS</a>
+        <a href="services.html#cloud">CLOUD INFRASTRUCTURE</a>
+        <a href="services.html#app">APP DEVELOPMENT</a>
+      </div>
+    </div>
+    <a class="drawer-highlight" href="makeover.html">WEBSITE MAKEOVER <span>↗</span></a>
+    <a class="drawer-highlight" href="seo-audit.html">FREE SEO AUDIT <span>↗</span></a>
+    <a href="services.html">CASE STUDIES <span>↗</span></a>
+    <a href="blog.html">NEWS <span>↗</span></a>
+    <a href="contact.html">CONTACT <span>↗</span></a>
+    <a href="services.html#stack">TECH STACK <span>↗</span></a>
+  </nav>
+  <div class="drawer-foot">
+    <div class="drawer-socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="LinkedIn">in</a><a href="mailto:hello@nathios.in" aria-label="Email">✉</a></div>
+    <div class="drawer-plus">+</div>
+    <a href="mailto:hello@nathios.in">HELLO@NATHIOS.IN</a>
+    <a href="tel:+91000999000">+91 000 999 000</a>
+  </div>
+</aside>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="qTL" gradientUnits="userSpaceOnUse" x1="-60" y1="-104" x2="-20" y2="10"><stop offset="0" stop-color="#19d3ff"/><stop offset="1" stop-color="#1f6bff"/></linearGradient>
+    <linearGradient id="qTR" gradientUnits="userSpaceOnUse" x1="0" y1="-60" x2="104" y2="0"><stop offset="0" stop-color="#0d1a7a"/><stop offset=".5" stop-color="#2b3fe6"/><stop offset="1" stop-color="#8a55ff"/></linearGradient>
+    <linearGradient id="qBR" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="10" y2="104"><stop offset="0" stop-color="#8a55ff"/><stop offset="1" stop-color="#3b2aa8"/></linearGradient>
+    <linearGradient id="qBL" gradientUnits="userSpaceOnUse" x1="-104" y1="0" x2="-8" y2="104"><stop offset="0" stop-color="#0b1a86"/><stop offset=".55" stop-color="#2557f0"/><stop offset="1" stop-color="#7a7cff"/></linearGradient>
+    <clipPath id="starClip"><path d="M0 -104 Q24 -24 104 0 Q24 24 0 104 Q-24 24 -104 0 Q-24 -24 0 -104Z"/></clipPath>
+    <symbol id="mark" viewBox="-110 -110 220 220">
+      <g clip-path="url(#starClip)">
+        <rect x="-110" y="-110" width="110" height="110" fill="url(#qTL)"/>
+        <rect x="0" y="-110" width="110" height="110" fill="url(#qTR)"/>
+        <rect x="0" y="0" width="110" height="110" fill="url(#qBR)"/>
+        <rect x="-110" y="0" width="110" height="110" fill="url(#qBL)"/>
+      </g>
+      <path d="M0 -15 Q3 -3 15 0 Q3 3 0 15 Q-3 3 -15 0 Q-3 -3 0 -15Z" fill="#040613"/>
+    </symbol>
+  </defs>
+</svg>
+
+
+<main>
+<!-- ================= CINEMATIC FULL-BLEED HERO ================= -->
+<section class="hero flux-hero" id="home">
+  <div class="flux-panel">
+
+    <div class="hero-visual" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero/hero-1.jpg">
+        <source src="assets/hero/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-vignette"></div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true"></div>
+    <div class="hero-orbit orbit-b" aria-hidden="true"></div>
+
+    <nav class="orbit-nav" aria-label="Main">
+      <a href="index.html" class="orbit-nav-logo" aria-label="Nathios home">
+        <img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo">
+      </a>
+      <div class="orbit-nav-links">
+        <a href="services.html">Solutions</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">Company</a>
+        <a href="blog.html">Resources</a>
+        <a href="seo-audit.html">SEO Audit</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="makeover.html" class="orbit-nav-cta">Makeover</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
+    </nav>
+
+    <div class="flux-hero-content orbit-center">
+      <div class="flux-brandmark"><img src="assets/nathios-mark-clean.png" alt="Nathios logo"></div>
+      <span class="flux-kicker">Unlocking Potential with Innovation</span>
+      <h1 class="orbit-h1">Where businesses<br>transform <span>with us</span></h1>
+      <p class="orbit-sub">Nathios turns your goals into coordinated web, AI and automation systems — with clear scope, visible progress, and a running product your team can own.</p>
+
+      <div class="orbit-cta-bar">
+        <input type="email" class="orbit-input" placeholder="Enter your email" aria-label="Email address">
+        <a href="contact.html" class="orbit-join">Get Started <span>→</span></a>
+      </div>
+      <a href="services.html" class="orbit-see">See how Nathios works <span>↓</span></a>
+    </div>
+
+    <div class="client-strip" aria-label="Technology ecosystem">
+      <span>Google</span><span>salesforce</span><span>◉ Pinterest</span><span>◈ ClickUp</span><span>● asana</span><span>◈ Airtable</span><span>▣ Notion</span>
+    </div>
+
+    <div class="flux-service-strip">
+      <div><i>▣</i><b>IT Consulting</b></div>
+      <div><i>◒</i><b>Cloud Adoption</b></div>
+      <div><i>◈</i><b>Cybersecurity</b></div>
+      <div><i>◇</i><b>Managed Services</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marq"><div class="marq-in" id="marq"></div></div>
+
+<!-- ================= SERVICES TEASER ================= -->
+<section class="sec" id="services-teaser">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Everything you need to launch and grow online.</h2>
+      <p>One team for design, development and AI. Pick a single service or bring us the whole product.</p>
+    </div>
+    <div class="svc-grid">
+      <a href="services.html#web" class="svc spot rv">
+        <div class="svc-top">
+          <div class="svc-icon">🖥️</div>
+          <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+        </div>
+        <h3>Website development</h3>
+        <p>Fast, search-ready websites that turn visitors into enquiries.</p>
+      </a>
+      <a href="services.html#app" class="svc spot rv" style="--d:60ms">
+        <div class="svc-top">
+          <div class="svc-icon">📱</div>
+          <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+        </div>
+        <h3>App development</h3>
+        <p>Scalable iOS and Android apps from a single codebase.</p>
+      </a>
+      <a href="services.html#ai" class="svc spot rv" style="--d:120ms">
+        <div class="svc-top">
+          <div class="svc-icon">🤖</div>
+          <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+        </div>
+        <h3>AI tool development</h3>
+        <p>Custom AI solutions and intelligent automation.</p>
+      </a>
+      <a href="services.html#ux" class="svc spot rv" style="--d:180ms">
+        <div class="svc-top">
+          <div class="svc-icon">🎨</div>
+          <div class="svc-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></div>
+        </div>
+        <h3>UI / UX design</h3>
+        <p>Intuitive interfaces people understand at first tap.</p>
+      </a>
+    </div>
+    <div class="rv" style="margin-top:36px;text-align:center">
+      <a href="services.html" class="btn">See all services
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="punch-marq" data-items="Ship faster. • Automate the busywork. • Design that converts. • One team, every discipline. • From idea to running product.">
+  <div class="punch-marq-in"></div>
+</div>
+
+<!-- ================= PROCESS / HOW IT WORKS ================= -->
+<section class="process-section" id="process">
+  <div class="process-wrap">
+    <div class="process-intro reveal-process">
+      <div class="process-eyebrow"><span>+</span><em>/ 003 /</em><b>Process</b></div>
+      <h2>How the work goes.<br><span>You are in each step.</span></h2>
+      <p>The plan is not the deliverable — the running system is. Every step here exists to get you to something your team can actually own.</p>
+      <a href="contact.html" class="process-talk">Talk to us <span>↗</span></a>
+    </div>
+
+    <div class="process-list" role="list">
+      <article class="process-item active" role="listitem">
+        <button class="process-trigger" type="button" aria-expanded="true" aria-controls="process-panel-1">
+          <span class="process-number">001</span><span class="process-name">Audit</span><span class="process-plus">+</span>
+        </button>
+        <div class="process-panel" id="process-panel-1">
+          <div class="process-panel-inner"><p>We understand your business, audience, existing stack and goals. You get a clear starting point before a single line of production code is written.</p><span>DISCOVER / ALIGN / PRIORITISE</span></div>
+        </div>
+      </article>
+      <article class="process-item" role="listitem">
+        <button class="process-trigger" type="button" aria-expanded="false" aria-controls="process-panel-2">
+          <span class="process-number">002</span><span class="process-name">Blueprint</span><span class="process-plus">+</span>
+        </button>
+        <div class="process-panel" id="process-panel-2">
+          <div class="process-panel-inner"><p>We turn the brief into a practical product blueprint: structure, user flows, visual direction, technical architecture and delivery milestones.</p><span>MAP / DESIGN / PLAN</span></div>
+        </div>
+      </article>
+      <article class="process-item" role="listitem">
+        <button class="process-trigger" type="button" aria-expanded="false" aria-controls="process-panel-3">
+          <span class="process-number">003</span><span class="process-name">Build</span><span class="process-plus">+</span>
+        </button>
+        <div class="process-panel" id="process-panel-3">
+          <div class="process-panel-inner"><p>Design and engineering move together. You see working progress, test real interactions and give feedback while the product is being built.</p><span>DESIGN / DEVELOP / TEST</span></div>
+        </div>
+      </article>
+      <article class="process-item" role="listitem">
+        <button class="process-trigger" type="button" aria-expanded="false" aria-controls="process-panel-4">
+          <span class="process-number">004</span><span class="process-name">Handover</span><span class="process-plus">+</span>
+        </button>
+        <div class="process-panel" id="process-panel-4">
+          <div class="process-panel-inner"><p>We launch, document the system and hand over the tools your team needs to operate it. Support can continue after launch when you need it.</p><span>LAUNCH / DOCUMENT / HAND OVER</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="sec tight">
+  <div class="wrap">
+    <div class="cta-band rv">
+      <h2>Tell us what you are building.</h2>
+      <p>Share a few details and we will reply with a scoped plan, timeline and fixed quote within one working day.</p>
+      <div class="cta-row">
+        <a href="contact.html" class="btn primary">Start your project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="pricing.html" class="btn">See pricing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CINEMATIC END / FINAL SCENE ================= -->
+<section class="final-scene" id="final-scene">
+  <img class="final-scene-bg" src="assets/final-cinematic-clean.jpg" alt="Nathios cinematic landscape" loading="lazy">
+  <div class="final-scene-shade"></div>
+  <div class="final-grain"></div>
+  <div class="final-rail" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="final-scene-content">
+    <div class="final-meta final-reveal"><span>NATHIOS / 004</span><span>WEB · AI · AUTOMATION</span></div>
+    <div class="final-copy final-reveal">
+      <div class="final-kicker">READY TO BUILD</div>
+      <h2>Something<br><em>different?</em></h2>
+      <p>Let's create a digital system that works for you — from the first idea to the running product.</p>
+      <a href="contact.html" class="final-cta">Let's Build <span>↗</span></a>
+    </div>
+    <div class="final-brand final-reveal">
+      <div class="final-logo-frame">
+        <img src="assets/nathios-mark-clean.png" alt="Nathios N logo">
+      </div>
+      <p class="final-brand-tagline">More than websites.<br>A more intelligent tomorrow.</p>
+      <div class="final-brand-line"></div>
+      <span>IDEAS · BUILD · BEYOND</span>
+    </div>
+  </div>
+  <div class="final-footer-line">
+    <span>Nathios</span><span>Web · AI · Automation</span>
+    <nav><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <span>© 2026</span>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="logo"><img class="mk nathios-mark" src="assets/nathios-mark-clean.png" alt="Nathios logo">Nathios</a>
+    <nav aria-label="Footer">
+      <a href="about.html">About</a><a href="services.html">Services</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    </nav>
+    <span>© 2026 Nathios. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+
+<section class="nathios-reference-end" aria-label="Start a project">
+  <div class="nre-left">
+    <div class="nre-mini">NATHIOS / 004</div>
+    <h2>Ready for a<br>new website?</h2>
+    <p>Partner with us, share your requirements, and let our team build a digital experience made for your business.</p>
+    <a href="contact.html" class="nre-button">GET STARTED <span>↗</span></a>
+  </div>
+  <div class="nre-right">
+    <div class="nre-slashes">/// /// /// /// /// /// /// /// ///</div>
+    <div class="nre-columns">
+      <div>
+        <b>PAGES</b>
+        <a href="index.html">Homepage</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="web-development.html">Web Development</a>
+        <a href="automation.html">Automation</a>
+        <a href="ai-agents.html">AI Agents</a>
+        <a href="cloud.html">Cloud</a>
+        <a href="app-development.html">Apps</a>
+        <a href="tech-stack.html">Tech Stack</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="detailed-rates.html">Detailed Rates</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <b>SOCIAL</b>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="linkedin">LinkedIn</a>
+        <a href="mailto:hello@nathios.in">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== Project enquiry popup (home page only) ===== -->
+<button type="button" class="pj-fab" id="pjOpen">Start a project <span>↗</span></button>
+<div class="pj-overlay" id="pjOverlay" aria-hidden="true">
+  <div class="pj-modal" role="dialog" aria-modal="true" aria-labelledby="pjTitle">
+    <button type="button" class="pj-close" id="pjClose" aria-label="Close">+</button>
+    <small class="pj-kicker">NATHIOS / NEW PROJECT</small>
+    <h2 id="pjTitle">What project do you want to make?</h2>
+    <p class="pj-sub">Tell us your idea. It comes straight to our inbox and we reply personally.</p>
+    <form id="pjForm" novalidate>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+      <div class="pj-row">
+        <label>Your name<input type="text" name="name" required placeholder="Your name"></label>
+        <label>Your email<input type="email" name="email" required placeholder="you@company.com"></label>
+      </div>
+      <label>Project type
+        <select name="project_type">
+          <option>Website</option><option>3D website</option><option>Mobile app</option>
+          <option>AI agent / chatbot</option><option>Automation</option><option>Cloud setup</option><option>Something else</option>
+        </select>
+      </label>
+      <label>Tell us about your project<textarea name="message" rows="4" required placeholder="What do you want to build? Any deadline or budget in mind?"></textarea></label>
+      <button type="submit" class="pj-send" id="pjSend">Send to Nathios ↗</button>
+      <p class="pj-status" id="pjStatus" role="status" aria-live="polite"></p>
+    </form>
+    <div class="pj-alt">
+      <span>Prefer to reach us directly?</span>
+      <a href="mailto:nathios.tech@gmail.com">nathios.tech@gmail.com</a>
+      <a href="https://www.linkedin.com/in/nathios-undefined-a4265143b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.instagram.com/nathios.tech/" target="_blank" rel="noopener">Instagram ↗</a>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var EMAIL='nathios.tech@gmail.com';
+  var ov=document.getElementById('pjOverlay'),form=document.getElementById('pjForm'),
+      st=document.getElementById('pjStatus'),btn=document.getElementById('pjSend');
+  function open(){ov.classList.add('on');ov.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function close(){ov.classList.remove('on');ov.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.getElementById('pjOpen').addEventListener('click',open);
+  document.getElementById('pjClose').addEventListener('click',close);
+  ov.addEventListener('click',function(e){if(e.target===ov)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  // Auto-open on every home page load, shortly after the page is ready
+  function auto(){setTimeout(open,1500);}
+  if(document.readyState==='complete')auto();else window.addEventListener('load',auto);
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(form);
+    if(!d.get('name')||!d.get('email')||!d.get('message')||!/^\S+@\S+\.\S+$/.test(d.get('email'))){
+      st.className='pj-status err';st.textContent='Please fill in your name, a valid email and your project details.';return;
+    }
+    btn.disabled=true;btn.textContent='Sending...';st.className='pj-status';st.textContent='';
+    d.append('_subject','New project enquiry from '+d.get('name')+' ('+d.get('project_type')+')');
+    d.append('_template','table');d.append('_captcha','false');
+    fetch('https://formsubmit.co/ajax/'+EMAIL,{method:'POST',headers:{'Accept':'application/json'},body:d})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j&&(j.success===true||j.success==='true')){
+          st.className='pj-status ok';st.textContent='Thank you! Your project details are on their way. We will reply soon.';
+          form.reset();btn.textContent='Sent ✓';
+        }else{throw new Error('fail');}
+      })
+      .catch(function(){
+        var body='Name: '+d.get('name')+'%0D%0AEmail: '+d.get('email')+'%0D%0AProject type: '+d.get('project_type')+'%0D%0A%0D%0A'+encodeURIComponent(d.get('message'));
+        st.className='pj-status err';
+        st.innerHTML='Could not send automatically. <a href="mailto:'+EMAIL+'?subject='+encodeURIComponent('New project enquiry')+'&body='+body+'">Click here to send it by email instead</a>.';
+        btn.disabled=false;btn.textContent='Send to Nathios ↗';
+      });
+  });
+})();
+</script>
+</body>
+</html>

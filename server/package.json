@@ -1,0 +1,10 @@
+{
+  "name": "nathios-seo-audit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Crawler + analyser API behind seo-audit.html",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test/run.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "cheerio": "^1.0.0" }
+}
